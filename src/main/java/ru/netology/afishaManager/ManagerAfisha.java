@@ -1,8 +1,8 @@
 package ru.netology.afishaManager;
 
 public class ManagerAfisha {
-    private static String[] movies = new String[0];
-    private static int limit;
+    protected String[] movies = new String[0];
+    protected int limit;
     public ManagerAfisha(int limit) {
         this.limit = limit;
     }
@@ -22,12 +22,12 @@ public class ManagerAfisha {
         movies = tmp;
     }
 
-    public static String[] findAll() {
+    public String[] findAll() {
 
         return movies;
     }
 
-    public static String[] findLast() {
+    public String[] findLast() {
         int resultSize = limit < movies.length ? limit : movies.length;
         String[] result = new String[resultSize];
         for (int i = 0; i < resultSize; i++){
